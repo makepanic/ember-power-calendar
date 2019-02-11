@@ -5,7 +5,11 @@ module.exports = {
 
   included() {
     this._super.included.apply(this, arguments);
-    if (['ember-power-calendar-moment', 'ember-power-calendar-luxon'].includes(this.project.name())) {
+    if ([
+      'ember-power-calendar-moment',
+      'ember-power-calendar-luxon',
+      '@makepanic/ember-power-calendar-date-fns',
+    ].includes(this.project.name())) {
       return;
     }
 
@@ -14,8 +18,9 @@ module.exports = {
 
     const hasMetaAddon = addons => {
       return Object.hasOwnProperty.call(addons, 'ember-power-calendar-moment') ||
-        Object.hasOwnProperty.call(addons, 'ember-power-calendar-luxon');
-    }
+        Object.hasOwnProperty.call(addons, 'ember-power-calendar-luxon') ||
+        Object.hasOwnProperty.call(addons, 'ember-power-calendar-date-fns') ;
+    };
 
     if (!hasMetaAddon(hostAppAddons) && !hasMetaAddon(parentAddons)) {
       throw new Error(`You have installed "ember-power-calendar" but you don't have any of the required meta-addons to make it work. Please, explicitly install 'ember-power-calendar-moment' or 'ember-power-calendar-luxon' in your app`);
