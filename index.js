@@ -19,7 +19,7 @@ module.exports = {
     const hasMetaAddon = addons => {
       return Object.hasOwnProperty.call(addons, 'ember-power-calendar-moment') ||
         Object.hasOwnProperty.call(addons, 'ember-power-calendar-luxon') ||
-        Object.hasOwnProperty.call(addons, 'ember-power-calendar-date-fns') ;
+        Object.hasOwnProperty.call(addons, '@makepanic/ember-power-calendar-date-fns') ;
     };
 
     if (!hasMetaAddon(hostAppAddons) && !hasMetaAddon(parentAddons)) {
