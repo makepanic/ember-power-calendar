@@ -1,3 +1,17 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="0.11.1"></a>
+## [0.11.1](https://github.com/cibernox/ember-power-calendar/compare/v0.11.0...v0.11.1) (2019-02-12)
+
+
+### Bug Fixes
+
+* fix incorrect meta addon check ([4e91c30](https://github.com/cibernox/ember-power-calendar/commit/4e91c30))
+
+
+
 ## Master
 
 ## 0.10.3
